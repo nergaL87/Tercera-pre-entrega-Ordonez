@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block TITULO %}RESULTADOS:{% endblock %}
+
+{% block CONTENIDO %}
+    
+    <h2>{{ users_nombre }}</h2>
+    
+    <h2>users - nombre</h2>
+    {% for user in users_nombre %}
+        <p>{{ user }}</p>
+    {% endfor %}
+    
+    <h2>users - nacimiento</h2>
+    {% for user in users_nacimiento %}
+        <p>{{ user | upper }}</p>
+    {% endfor %}
+    
+    
+    <a href="{% url 'index' %}">Ir a menú principal</a>
+{% endblock %}

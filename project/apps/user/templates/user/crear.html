@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block TITULO %}Crear usuario{% endblock %}
+
+{% block CONTENIDO %}
+
+    <form method="post">
+    {% csrf_token %}
+    
+    {{ form.as_p }}
+
+    <button type="submit">Guardar</button>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block CONTENIDO %}
+    <div style="text-align: center; font-size: xx-large;">
+        <a href="{% url 'user:index' %}">Ir a Usuarios</a>
+        <br>
+        <a href="{% url 'rutina:index' %}">Ir a Rutinas</a>
+    </div>
+{% endblock %}

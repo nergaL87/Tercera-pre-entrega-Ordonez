@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block TITULO %}USUARIOS{% endblock %}
+
+{% block CONTENIDO %}
+    {% for user in users %}
+        <h2>{{ user.nombre }}</h2>
+        <p>{{ user.apellido }}</p>
+        <p>{{ user.nacimiento }}</p>
+    {% endfor %}
+    
+    <a href="{% url 'user:crear-usuarios' %}">Crear datos de usuarios preestablecidos</a>
+    <br>
+    <a href="{% url 'user:prueba-búsqueda' %}">Prueba de búsqueda</a>
+    <br>
+    <a href="{% url 'user:crear' %}">Crear usuario</a>
+    <br>
+    <a href="{% url 'index' %}">Ir a menú principal</a>
+{% endblock %}
